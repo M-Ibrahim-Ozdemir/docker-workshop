@@ -30,5 +30,12 @@ print(f'hello pipeline, month = {month}')   #termibalde python pipeline.py 12   
 
 # uv run python pipeline.py 12 :   bunu dersen solda dosya oluşturuyorırrr. Bunu plıuyrumakiçin sanalortamda p okunukullnıyor
 
+# git add vb gibi 5 6 işlem var ilk işlem hattı sürünmümüzü  yaptık 
+
+"""💡 Küçük Bir Detay: .venv Nerede?
+Fark ettiysen git status çıktısında .venv klasörü (kütüphanelerin yüklü olduğu yer) görünmüyor. Bu çok iyi bir şey! Çünkü biz .gitignore dosyasına onu ekledik. Kütüphaneleri değil, o kütüphanelerin isimlerinin yazdığı uv.lock ve pyproject.toml dosyalarını kaydettik. Profesyonel standart budur.
+Şimdi git push yazdıysan gönül rahatlığıyla çıkabilirsin. Yarın geldiğinde her şey bıraktığın gibi seni bekliyor olacak.
+Yarın görüşürüz Muhammet, harika bir gün sonu oldu! Başka bir sorun var mı yoksa "Stop Codespace" diyip dinlenmeye mi geçiyoruz?"""
+
 
 
