@@ -24,10 +24,11 @@ RUN uv sync --locked
 #build edince hızlıda heğpsiniinşa ettipip instal ile yavaş
 
 
-COPY pipeline.py . 
-#("pipeline.py dosyasını şu anki çalışma klasörüme (/code) kopyala" demek).
+# 1. Buradaki ismi ingest_data.py yap (Çünkü Click burada!)
+COPY ingest_data.py . 
 
-ENTRYPOINT ["python", "pipeline.py" ]  
+# 2. Giriş noktasını da bu dosya yap
+ENTRYPOINT ["python", "ingest_data.py"]  
 
 #işelmleri otımati yapmak manuel olmamamak için giris python işlem hattı sağda dcoker run yurutulek code yorumlar lar,
 
@@ -38,3 +39,6 @@ ENTRYPOINT ["python", "pipeline.py" ]
 #(((((docker run -it --rm test:pandas 12)))))  => calistir
 #docker lastirilmisveri hattimiziolusturduk
 
+
+#  (pipeline) > cd pipeline/
+#  (pipeline) > docker build -t taxi_ingest:v001 .
