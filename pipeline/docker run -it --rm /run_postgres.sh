@@ -9,6 +9,16 @@ docker run -it --rm \
   postgres:18
 
 
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
+  -v pgadmin_data:/var/lib/pgadmin \
+  -p 8085:80 \
+  --network=pg-network \
+  --name pgadmin \
+  dpage/pgadmin4
+
+
 
 uv run python ingest_data.py \
   --pg-user=root \
@@ -23,7 +33,7 @@ uv run python ingest_data.py \
 
 
   docker run -it --rm \
-   --network=pg-network \
+   --network=pipeline_default \
     taxi_ingest:v001 \
     --pg-user=root \
     --pg-pass=root \
@@ -32,3 +42,4 @@ uv run python ingest_data.py \
     --pg-db=ny_taxi \
     --target-table=yellow_taxi_trips_2021_1 \
     --chunksize=100000
+    #bu verileri ekliyor database içine
