@@ -43,3 +43,13 @@ uv run python ingest_data.py \
     --target-table=yellow_taxi_trips_2021_1 \
     --chunksize=100000
     #bu verileri ekliyor database içine
+    #Kodumuzu her ortamda çalışabilir (portable) hale getirmek.
+    #docker run kullandık? Çünkü script'imiz (ingest_data.py) artık bir Docker imajı (taxi_ingest:v001) içinde paketli. Yarın bu imajı bir sunucuya (AWS, Azure vb.) atsak da aynı komutla çalışacak.
+      #------
+    #Otomatik ayağa kalkan bir Veri Tabanı (Postgres).
+
+    #Onu yöneten bir Arayüz (pgAdmin).
+
+    #Verileri internetten çekip yükleyen Dockerize edilmiş bir Script.
+
+    #Bunların hepsini tek yerden yöneten bir Docker Compose dosyası var.
