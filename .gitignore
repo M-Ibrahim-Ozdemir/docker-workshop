@@ -5,3 +5,5 @@
 __pycache__/
 .venv/
 .env
+kestra_data/
+kestra_tmp/
